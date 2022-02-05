@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' content="KTN Main page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTN에 오신 것을 환영합니다</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+
+      body{margin-left:0;margin-right:0;padding:0;background-color:#F5F5F5;}
+      #logo {text-align:center;}
+
+      .container {display:flex; flex-direction:row;height:20%;background-color:#2E2E2E;}
+      .item {color: white; text-align:center;flex-grow:1;font-family: 'NEXON Lv2 Gothic';font-weight:bold;padding:0.5%;}
+      .item>a {text-decoration:none; color:inherit;font-size:0.8rem;}
+
+      @font-face {font-family: 'NEXON Lv2 Gothic';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');font-weight: normal;font-style: normal;}
+
+      .container1 {display:flex;flex-direction:row;width:70%;margin:3%;text-align:center;}
+      .item1 {display:flex;flex-direction:column;}
+      #youtube {flex-grow:3;margin-right:3%}
+      #sns {flex-grow:2}
+      .sns{width:285%;}
+      #youtube_p{width:100%;}
+
+      .container2 {display:flex;flex-direction:row;margin-left:3%;margin-right:3%width:100%;margin-bottom:3%;}
+      .item2 {display:flex;flex-direction:row;width:100%;}
+      .item2 img {width:85%;}
+      .item2-2 img {width:90%;}
+
+      .section input[id*="slide"] {display:none;}
+
+      /* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
+      .section{width:92%;}
+    	.section .slidewrap {max-width:100%;margin:0 auto;overflow:hidden;}
+    	.section .slidelist {white-space:nowrap;font-size:0;padding:0;}
+    	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+    	.section .slidelist > li > a {display:block;position:relative;}
+    	.section .slidelist > li > a img {width:100%;}
+
+    	/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+    	.section .slidelist label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:20px;cursor:pointer;}
+    	.section .slidelist .left {left:1px;background:url('left.png') center center / 100% no-repeat;}
+    	.section .slidelist .right {right:1px;background:url('right.png') center center / 100% no-repeat;}
+
+    	/* INPUT 체크되면 변화값이 li까지 전달되는 스타일 */
+    	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+    	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+    	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+      .container3 {display:flex;flex-direction:row;background-color:#2E2E2E;padding:0.5%;}
+      .item3{font-family: 'NEXON Lv2 Gothic';text-align:center;color:white;flex-grow:1;font-size:0.5rem;margin-top:0.5%;margin-bottom:0.5%;margin-right:5%;}
+      .item3 > a{text-decoration:none; color:inherit;}
+      #item3-1 {margin-left:25%}
+      #item3-4 {margin-right:25%}
+      footer{margin-top:15px;}
+      #footer_text{margin:1%;font-color:#2E2E2E;font-family: 'Noto Sans KR';text-align:center;font-size:0.001rem;line-height:130%;font-weight:300;}
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id='logo'><a href='main_page.html'><img src="KTN_logo.png" width=8%></a></div>
+    </header>
+    <menus>
+      <div class='container'>
+        <div class = 'item'><a href='about.html'>ABOUT</a></div>
+        <div class = 'item'><a href='production.html'>PRODUCTION</a></div>
+        <div class = 'item'><a href='event.html'>EVENT</a></div>
+        <div class = 'item'><a href='contact.html'>CONTACT</a></div>
+        <div class = 'item'><a href='http://intranet.ktn.ac.kr'>INTRANET</a></div>
+      </div>
+    </menus>
+
+    <line1>
+      <div class='container1'>
+        <div class='item1' id='youtube'><a href='https://www.youtube.com/channel/UCorQ2_2ylADiF5IvTt1r6Ng'><img src='KTN Youtube.png' id='youtube_p' ></a></div>
+          <div class='item1' id='sns'>
+            <div class='item1-2'><a href='https://www.facebook.com/ktnpage/'><img src='KTN Facebook.png' class='sns'></a></div>
+            <div class='item1-2'><a href='https://www.instagram.com/ktn_official_/'><img src='KTN Instagram.png' class='sns'></a></div>
+          </div>
+      </div>
+    </line1>
+
+    <line2>
+      <div class='container2'>
+        <div class='item2' id='icons'>
+          <div class='item2-1'><a href='https://www.notion.so/TV-KTN-1cefc1acce2141259ac7884132207880'><img src='notion.jpg'></a></div>
+          <div class='item2-1'><a href='contact.html'><img src='contact.png'></a></div>
+          <div class='item2-1'><a href='#'><img src='recruiting.jpg' onclick="alert('리크루팅 기간이 아닙니다.')"></a></div>
+        </div>
+
+        <div class='item2' id='gallery'>
+          <div class='item2-2'>
+            <div class='section'>
+              <input type='radio' name='slide' id='slide01' checked>
+              <input type='radio' name='slide' id='slide02'>
+              <input type='radio' name='slide' id='slide03'>
+
+              <div class='slidewrap'>
+                <ul class='slidelist'>
+                  <li>
+                    <a>
+                      <label for='slide03' class='left'></label>
+                      <img src='gallery_1.jpg'>
+                      <label for='slide02' class='right'></label>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a>
+                      <label for='slide01' class='left'></label>
+                      <img src='gallery_2.jpg'>
+                      <label for='slide03' class='right'></label>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a>
+                      <label for='slide02' class='left'></label>
+                      <img src='gallery_3.jpg'>
+                      <label for='slide01' class='right'></label>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </line2>
+
+    <footer>
+      <div class='container3'>
+        <div class='item3' id='item3-1'><a href='main_page.html'>KTN</a></div>
+        <div class='item3'><a href='https://portal.korea.ac.kr/front/Intro.kpd'>KUPID</a></div>
+        <div class='item3'><a href='http://www.korea.ac.kr/mbshome/mbs/university/index.do'>고려대학교</a></div>
+        <div class='item3' id='item3-4'><a href='http://data.ktn.ac.kr'>자료관리</a></div>
+      </div>
+      <div id='footer_text'>
+      1997-현재, 고려대학교 TV방송국 KTN 모든 소유권 보유.<br>서울특별시 성북구 안암로 145 고려대학교 홍보관 4층 고려대학교 TV방송국 KTN<br>02-3290-1521, 6 / media@korea.ac.kr
+      </div>
+    </footer>
+  </body>
+</html>
